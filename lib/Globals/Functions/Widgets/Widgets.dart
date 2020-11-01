@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:shubban_educational_forum/Globals/Classes/Colors.dart';
+import 'package:shubban_educational_forum/Globals/Vairables/variables.dart';
 import 'package:shubban_educational_forum/main.dart';
+
+import '../../../speakerDepartmentPage.dart';
 
 CScaffold(
     {String title,
@@ -40,20 +43,27 @@ CScaffold(
 CSimpleScaffold(
     {String title,
     Color backgroundColor,
-    AppBar appBar,
+    PreferredSizeWidget appBar,
     Widget body,
-    @required BuildContext context}) {
+    @required BuildContext context,
+    bool showAppBar}) {
+  if (showAppBar == null) {
+    showAppBar = true;
+  }
   return Scaffold(
-    // drawer: CDrawer(context: context),
-    appBar: AppBar(
-      centerTitle: true,
-      iconTheme: new IconThemeData(color: Colors.white),
-      backgroundColor: CColors.dGreen,
-      title: Text(
-        title.toUpperCase(),
-        style: TextStyle(color: Colors.white),
-      ),
-    ),
+    appBar: showAppBar
+        ? appBar == null
+            ? AppBar(
+                centerTitle: true,
+                iconTheme: new IconThemeData(color: Colors.white),
+                backgroundColor: CColors.dGreen,
+                title: Text(
+                  title.toUpperCase(),
+                  style: TextStyle(color: Colors.white),
+                ),
+              )
+            : appBar
+        : null,
     body: Stack(
       children: [
         Column(
@@ -85,12 +95,13 @@ CDrawer({List<ListTile> listTiles, @required BuildContext context}) {
   int index = 1;
   Map<int, Function> iteamsFunctions = {
     hello.speakerDepartment.index: () {
-      Navigator.pushAndRemoveUntil(
-          context,
-          MaterialPageRoute(
-            builder: (context) => SpeakerDepartment(),
-          ),
-          (route) => false);
+      if (PAGE.speakerDept.index != Variables.PageNo)
+        Navigator.pushAndRemoveUntil(
+            context,
+            MaterialPageRoute(
+              builder: (context) => SpeakerDepartmentPage(),
+            ),
+            (route) => false);
     },
     hello.visitorDepartment.index: () {},
     hello.followUpDepartment.index: () {},
