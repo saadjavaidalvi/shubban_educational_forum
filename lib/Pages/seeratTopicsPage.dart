@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:shubban_educational_forum/Globals/Functions/Widgets/Navigator.dart';
 
-import 'Globals/Classes/Colors.dart';
-import 'Globals/Functions/Widgets/GridView.dart';
-import 'Globals/Functions/Widgets/Widgets.dart';
-import 'khatm_e_nabuwat.dart';
+import '../Globals/Classes/Colors.dart';
+import '../Globals/Functions/Widgets/GridView.dart';
+import '../Globals/Functions/Widgets/Widgets.dart';
+import 'khatm_e_nabuwatPage.dart';
 
 class SeeratTopics extends StatelessWidget {
   // BuildContext cContext;
@@ -39,9 +39,8 @@ class SeeratTopics extends StatelessWidget {
     () {},
   ];
   _setNavigationRoutes(BuildContext context) {
-    functions[0] = () {
-      CNavigator.push(context: context, className: Khatm_e_Nabuwat());
-    };
+    functions[0] =
+        CNavigator.push(context: context, className: Khatm_e_NabuwatPage());
   }
 
   @override

@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:shubban_educational_forum/Globals/Classes/Colors.dart';
 import 'package:shubban_educational_forum/Globals/Functions/Widgets/Navigator.dart';
-import 'package:shubban_educational_forum/lecturePage.dart';
+import 'package:shubban_educational_forum/Pages/lecturePage.dart';
 
-import 'Globals/Functions/Widgets/Widgets.dart';
+import '../Globals/Functions/Widgets/Widgets.dart';
 
-class Khatm_e_Nabuwat extends StatefulWidget {
+class Khatm_e_NabuwatPage extends StatefulWidget {
   @override
-  _Khatm_e_NabuwatState createState() => _Khatm_e_NabuwatState();
+  _Khatm_e_NabuwatPageState createState() => _Khatm_e_NabuwatPageState();
 }
 
-class _Khatm_e_NabuwatState extends State<Khatm_e_Nabuwat> {
+class _Khatm_e_NabuwatPageState extends State<Khatm_e_NabuwatPage> {
   Color listTileColor = CColors.yellow;
   List<String> slidesNumbers = [
     '1,2',
@@ -80,15 +80,13 @@ class _Khatm_e_NabuwatState extends State<Khatm_e_Nabuwat> {
                     Icons.play_circle_fill,
                     color: CColors.dGreen,
                   ),
-                  onTap: () {
-                    CNavigator.push(
-                        className: LecturePage(
-                          slideLectureNo: index,
-                          // slides: slidesNumbers[index],
-                          lectures: lectueUrls,
-                        ),
-                        context: context);
-                  },
+                  onTap: CNavigator.push(
+                      className: LecturePage(
+                        slideLectureNo: index,
+                        // slides: slidesNumbers[index],
+                        lectures: lectueUrls,
+                      ),
+                      context: context),
                   tileColor: listTileColor,
                   // leading: Icon(Icons.book),
                   // Text("${index + 1}"),

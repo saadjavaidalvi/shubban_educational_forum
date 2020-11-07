@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shubban_educational_forum/Globals/Functions/Widgets/Navigator.dart';
 import 'package:shubban_educational_forum/Globals/Functions/Widgets/Widgets.dart';
+import 'package:shubban_educational_forum/Pages/khatm_e_nabuwatPage.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 class LecturePage extends StatefulWidget {
@@ -17,7 +18,10 @@ class LecturePage extends StatefulWidget {
 
 class _LecturePageState extends State<LecturePage> {
   YoutubePlayerController _youtubeController;
-  bool showAppBar = true;
+  bool showAppBar = false;
+  bool firstTime = true;
+
+  bool secondTime = false;
 
   @override
   void initState() {
@@ -34,57 +38,47 @@ class _LecturePageState extends State<LecturePage> {
         enableCaption: true,
       ),
     );
+    _youtubeController.toggleFullScreenMode();
   }
 
   @override
   Widget build(BuildContext context) {
     return CSimpleScaffold(
-        // appBar:
-        // showAppBar ? null :
-        //     PreferredSize(
-        //   preferredSize: Size.fromHeight(10),
-        //   child: SafeArea(
-        //     child: Row(
-        //       mainAxisAlignment: MainAxisAlignment.start,
-        //       children: [
-        //         IconButton(
-        //             icon: Icon(Icons.arrow_left,color: Colors.white,),
-        //             onPressed: () {
-        //               CNavigator.pop(context: context);
-        //             })
-        //       ],
-        //     ),
-        //   ),
-        // ),
-        // AppBar(
-        //   backgroundColor: Colors.transparent,
-        // ),
         showAppBar: showAppBar,
         context: context,
         title: 'Lecture No. ${widget.slideLectureNo + 1}',
         body: YoutubePlayerBuilder(
-          onEnterFullScreen: () {
-            showAppBar = false;
-            setState(() {});
-          },
+          // onEnterFullScreen: () {
+          //   showAppBar = false;
+          //   setState(() {});
+          // },
           onExitFullScreen: () {
-            showAppBar = true;
-            setState(() {});
+            if (firstTime) {
+              firstTime = false;
+              return;
+            }
+            if (secondTime) {
+              return;
+            }
+            Navigator.pop(context);
+            secondTime = true;
+            firstTime = true;
           },
           player: YoutubePlayer(
-            onReady: () {
-              _youtubeController.toggleFullScreenMode();
-            },
+            // onReady: () {
+            //   _youtubeController.toggleFullScreenMode();
+            // },
             onEnded: (YoutubeMetaData value) {
               if (widget.slideLectureNo + 1 == widget.lectures.length) {
-                CNavigator.pop(context: context);
+                Navigator.pop(context);
                 return;
               }
-              CNavigator.pushReplace(
-                  context: context,
-                  className: LecturePage(
-                      slideLectureNo: widget.slideLectureNo + 1,
-                      lectures: widget.lectures));
+              Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => LecturePage(
+                          slideLectureNo: widget.slideLectureNo + 1,
+                          lectures: widget.lectures)));
               return;
             },
             showVideoProgressIndicator: true,

@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:shubban_educational_forum/Globals/Classes/Colors.dart';
 import 'package:shubban_educational_forum/Globals/Functions/Widgets/Widgets.dart';
-import 'package:shubban_educational_forum/seeratTopicsPage.dart';
+import 'package:shubban_educational_forum/Pages/HomePage/homePage.dart';
+import 'package:shubban_educational_forum/Pages/seeratTopicsPage.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
-import 'speakerDepartmentPage.dart';
+import 'Pages/speakerDepartmentPage.dart';
 
 void main() {
   runApp(MyApp());
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: SpeakerDepartmentPage(title: 'Flutter Demo Home Page'),
+      home: HomePage(),
     );
   }
 }

@@ -5,6 +5,15 @@ CGridView(
     {@required List<String> headings,
     @required List<String> subtexts,
     @required List<Function> functions}) {
+  if (subtexts == null) {
+    subtexts = List<String>.filled(headings.length, '');
+  }
+  if (functions == null) {
+    functions = List<Function>.filled(
+      headings.length,
+      () {},
+    );
+  }
   return Padding(
     padding: const EdgeInsets.fromLTRB(10.0, 25, 10, 25),
     child: Container(

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:shubban_educational_forum/Globals/Functions/Widgets/GridView.dart';
 
-import 'Globals/Classes/Colors.dart';
-import 'Globals/Functions/Widgets/Navigator.dart';
-import 'Globals/Functions/Widgets/Widgets.dart';
-import 'Globals/Functions/Widgets/onWillScope.dart';
+import '../Globals/Classes/Colors.dart';
+import '../Globals/Functions/Widgets/Navigator.dart';
+import '../Globals/Functions/Widgets/Widgets.dart';
+import '../Globals/Functions/Widgets/onWillScope.dart';
 import 'seeratTopicsPage.dart';
 
 class SpeakerDepartmentPage extends StatefulWidget {
@@ -19,23 +19,15 @@ class _SpeakerDepartmentPageState extends State<SpeakerDepartmentPage> {
   @override
   Widget build(BuildContext context) {
     List<String> homeOptionsHeading = [
-      "SEERAT-UN-NABI (P.B.U.H)",
-      "LIFE SKILLS",
-      "REFRESHER",
-      "FAQ'S"
+      "SEERAT Section",
+      "LIFE SKILLS section",
+      "REFRESHER courses",
+      "Foundation Traning Course"
+      // "FAQ'S"
     ];
-    List<String> homeOptionsSubtext = ["TOPICS", "TOPICS", "COURSES", ""];
-    // List homeOptionsClasses = [
-    //   SeeratTopics(),
-    //   SeeratTopics(),
-    //   SeeratTopics(),
-    //   SeeratTopics()
-    // ];
-
+    List<String> homeOptionsSubtext = ["", "", "", "(FTC)"];
     List<Function> functions = [
-      () {
-        CNavigator.push(context: context, className: SeeratTopics());
-      },
+      CNavigator.push(context: context, className: SeeratTopics()),
       () {},
       () {},
       () {}
@@ -44,11 +36,9 @@ class _SpeakerDepartmentPageState extends State<SpeakerDepartmentPage> {
     return CScaffold(
         context: context,
         title: 'Speaker Department',
-        body: WillPopScope(
-            child: CGridView(
-                headings: homeOptionsHeading,
-                subtexts: homeOptionsSubtext,
-                functions: functions),
-            onWillPop: onWillPop));
+        body: CGridView(
+            headings: homeOptionsHeading,
+            subtexts: homeOptionsSubtext,
+            functions: functions));
   }
 }
