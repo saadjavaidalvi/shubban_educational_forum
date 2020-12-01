@@ -3,7 +3,7 @@ import 'package:shubban_educational_forum/Globals/Classes/Colors.dart';
 import 'package:shubban_educational_forum/Globals/Vairables/variables.dart';
 import 'package:shubban_educational_forum/main.dart';
 
-import '../../../Pages/speakerDepartmentPage.dart';
+import '../../../Pages/SpeakerDepartment/speakerDepartmentPage.dart';
 
 CScaffold(
     {String title,

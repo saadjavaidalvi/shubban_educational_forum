@@ -5,7 +5,7 @@ import '../Globals/Classes/Colors.dart';
 import '../Globals/Functions/Widgets/Navigator.dart';
 import '../Globals/Functions/Widgets/Widgets.dart';
 import '../Globals/Functions/Widgets/onWillScope.dart';
-import 'seeratTopicsPage.dart';
+import 'SpeakerDepartment/seeratTopicsPage.dart';
 
 class VisitorDepartmentPage extends StatefulWidget {
   VisitorDepartmentPage({Key key, this.title}) : super(key: key);

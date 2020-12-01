@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:shubban_educational_forum/Globals/Functions/Widgets/GridView.dart';
 
-import '../Globals/Classes/Colors.dart';
-import '../Globals/Functions/Widgets/Navigator.dart';
-import '../Globals/Functions/Widgets/Widgets.dart';
-import '../Globals/Functions/Widgets/onWillScope.dart';
+import '../../Globals/Classes/Colors.dart';
+import '../../Globals/Functions/Widgets/Navigator.dart';
+import '../../Globals/Functions/Widgets/Widgets.dart';
+import '../../Globals/Functions/Widgets/onWillScope.dart';
 import 'seeratTopicsPage.dart';
 
 class SpeakerDepartmentPage extends StatefulWidget {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shubban_educational_forum/Globals/Functions/Widgets/Navigator.dart';
 import 'package:shubban_educational_forum/Globals/Functions/Widgets/Widgets.dart';
-import 'package:shubban_educational_forum/Pages/khatm_e_nabuwatPage.dart';
+import 'package:shubban_educational_forum/Pages/SpeakerDepartment/khatm_e_nabuwatPage.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 class LecturePage extends StatefulWidget {

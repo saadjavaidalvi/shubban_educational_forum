@@ -7,7 +7,7 @@ import 'package:shubban_educational_forum/Pages/VisitorDepartmentPage.dart';
 import 'package:shubban_educational_forum/Pages/faqsPage.dart';
 import 'package:shubban_educational_forum/Pages/financeDepartment.dart';
 import 'package:shubban_educational_forum/Pages/followUpDepartment.dart';
-import 'package:shubban_educational_forum/Pages/speakerDepartmentPage.dart';
+import 'package:shubban_educational_forum/Pages/SpeakerDepartment/speakerDepartmentPage.dart';
 import 'package:shubban_educational_forum/Pages/studentDepartmentPage.dart';
 
 class HomePage extends StatefulWidget {
