@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shubban_educational_forum/Globals/Functions/Widgets/Navigator.dart';
+import 'package:shubban_educational_forum/Pages/namoos_e_risalatPage.dart';
 
 import '../Globals/Classes/Colors.dart';
 import '../Globals/Functions/Widgets/GridView.dart';
@@ -16,7 +17,7 @@ class SeeratTopics extends StatelessWidget {
     "buniadi insani",
     "fitna-e-qadianiat",
     "qadianiat ordinence",
-    "faq's"
+    // "faq's"
   ];
   List<String> homeOptionsSubtext = [
     "(p.b.u.h)",
@@ -26,7 +27,7 @@ class SeeratTopics extends StatelessWidget {
     "haqooq",
     "siasi tehreek ya mazhabi?",
     "1984 (298 b,c)",
-    ""
+    // ""
   ];
   List<Function> functions = [
     () {},
@@ -36,11 +37,13 @@ class SeeratTopics extends StatelessWidget {
     () {},
     () {},
     () {},
-    () {},
+    // () {},
   ];
   _setNavigationRoutes(BuildContext context) {
     functions[0] =
         CNavigator.push(context: context, className: Khatm_e_NabuwatPage());
+    functions[1] =
+        CNavigator.push(context: context, className: Namoos_E_RisalatPage());
   }
 
   @override

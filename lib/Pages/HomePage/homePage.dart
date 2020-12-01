@@ -17,13 +17,13 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   List<String> headings = [
+    "Orientation",
     "Speaker Department",
     "Visitor Department",
     "Student Department",
     "Follow Up Department",
     "Finance Department",
     'FAQ\'s',
-    "Orientation"
   ];
 
   List<Function> functions = [];
@@ -32,6 +32,7 @@ class _HomePageState extends State<HomePage> {
   void initState() {
     // TODO: implement initState
     functions = [
+      () {},
       CNavigator.push(context: context, className: SpeakerDepartmentPage()),
       CNavigator.push(context: context, className: VisitorDepartmentPage()),
       CNavigator.push(context: context, className: StudentDepartmentPage()),
@@ -39,9 +40,8 @@ class _HomePageState extends State<HomePage> {
       CNavigator.push(context: context, className: FinanceDepartmentPage()),
       CNavigator.push(context: context, className: FaqsPage()),
       // CNavigator.push(context: context, className: StudentDepartmentPage()),
-      () {}
     ];
-    print(functions.length);
+    // print(functions.length);
   }
 
   @override
