@@ -70,10 +70,26 @@ class FaqsFollowUp extends StatelessWidget {
               child: Align(
                 alignment: Alignment.center,
                 child: ListTile(
-                  trailing: Icon(
-                    Icons.play_circle_fill,
-                    color: CColors.dGreen,
-                  ),
+                  // onLongPress: () {
+                  //   showDialog(
+                  //       context: context,
+                  //       child: AlertDialog(
+                  //         title: Text('Share'),
+                  //         // Row(
+                  //         //   children: [
+                  //         //
+                  //         // Icon(Icons.share)
+                  //         //   ],
+                  //         // ),
+                  //         content: Text('Share youtube link'),
+                  //         actions: [
+                  //           CShareButton(
+                  //               icon: Icons.send,
+                  //               url: 'https://youtu.be/' + lectueUrls[index])
+                  //         ],
+                  //       ));
+                  // },
+                  trailing: CShareButton(url: lectueUrls[index]),
                   onTap: CNavigator.push(
                       className: LecturePage(
                         slideLectureNo: index,

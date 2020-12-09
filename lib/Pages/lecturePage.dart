@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:share/share.dart';
 import 'package:shubban_educational_forum/Globals/Functions/Widgets/Navigator.dart';
 import 'package:shubban_educational_forum/Globals/Functions/Widgets/Widgets.dart';
 import 'package:shubban_educational_forum/Pages/SpeakerDepartment/khatm_e_nabuwatPage.dart';
@@ -43,55 +44,52 @@ class _LecturePageState extends State<LecturePage> {
 
   @override
   Widget build(BuildContext context) {
-    return CSimpleScaffold(
-        showAppBar: showAppBar,
-        context: context,
-        title: 'Lecture No. ${widget.slideLectureNo + 1}',
-        body: YoutubePlayerBuilder(
-          // onEnterFullScreen: () {
-          //   showAppBar = false;
-          //   setState(() {});
-          // },
-          onExitFullScreen: () {
-            if (firstTime) {
-              firstTime = false;
-              return;
-            }
-            if (secondTime) {
-              return;
-            }
-            Navigator.pop(context);
-            secondTime = true;
-            firstTime = true;
-          },
-          player: YoutubePlayer(
-            // onReady: () {
-            //   _youtubeController.toggleFullScreenMode();
-            // },
-            onEnded: (YoutubeMetaData value) {
-              if (widget.slideLectureNo + 1 == widget.lectures.length) {
+    return SafeArea(
+      child: CSimpleScaffold(
+          showAppBar: showAppBar,
+          context: context,
+          title: 'Lecture No. ${widget.slideLectureNo + 1}',
+          body: Container(
+            child: YoutubePlayerBuilder(
+              onExitFullScreen: () {
+                if (firstTime) {
+                  firstTime = false;
+                  return;
+                }
+                if (secondTime) {
+                  return;
+                }
                 Navigator.pop(context);
-                return;
-              }
-              Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => LecturePage(
-                          slideLectureNo: widget.slideLectureNo + 1,
-                          lectures: widget.lectures)));
-              return;
-            },
-            showVideoProgressIndicator: true,
-            progressColors: ProgressBarColors(
-                backgroundColor: Colors.grey,
-                bufferedColor: Colors.white,
-                playedColor: Colors.red,
-                handleColor: Colors.red),
-            controller: _youtubeController,
-          ),
-          builder: (BuildContext context, Widget child) {
-            return child;
-          },
-        ));
+                secondTime = true;
+                firstTime = true;
+              },
+              player: YoutubePlayer(
+                onEnded: (YoutubeMetaData value) {
+                  if (widget.slideLectureNo + 1 == widget.lectures.length) {
+                    Navigator.pop(context);
+                    return;
+                  }
+                  Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => LecturePage(
+                              slideLectureNo: widget.slideLectureNo + 1,
+                              lectures: widget.lectures)));
+                  return;
+                },
+                showVideoProgressIndicator: true,
+                progressColors: ProgressBarColors(
+                    backgroundColor: Colors.grey,
+                    bufferedColor: Colors.white,
+                    playedColor: Colors.red,
+                    handleColor: Colors.red),
+                controller: _youtubeController,
+              ),
+              builder: (BuildContext context, Widget child) {
+                return child;
+              },
+            ),
+          )),
+    );
   }
 }

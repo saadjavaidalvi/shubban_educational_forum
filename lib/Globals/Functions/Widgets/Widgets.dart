@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:share/share.dart';
 import 'package:shubban_educational_forum/Globals/Classes/Colors.dart';
 import 'package:shubban_educational_forum/Globals/Vairables/variables.dart';
 import 'package:shubban_educational_forum/main.dart';
@@ -156,4 +157,20 @@ CListTile({String title, Function onTap, Color color, int index}) {
     title: Text(title),
     onTap: onTap,
   );
+}
+
+Widget CShareButton({@required String url, String text, IconData icon}) {
+  if (icon == null) {
+    icon = Icons.share;
+  }
+  url = 'https://www.youtube.com/watch?v=' + url;
+  return IconButton(
+      icon: Icon(icon),
+      onPressed: () {
+        if (text != null) {
+          Share.share(text + '\n' + url);
+        } else {
+          Share.share(url);
+        }
+      });
 }

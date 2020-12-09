@@ -70,10 +70,7 @@ class SpeakerFtc extends StatelessWidget {
               child: Align(
                 alignment: Alignment.center,
                 child: ListTile(
-                  trailing: Icon(
-                    Icons.play_circle_fill,
-                    color: CColors.dGreen,
-                  ),
+                  trailing: CShareButton(url: lectueUrls[index]),
                   onTap: CNavigator.push(
                       className: LecturePage(
                         slideLectureNo: index,

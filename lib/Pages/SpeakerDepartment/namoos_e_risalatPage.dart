@@ -65,10 +65,7 @@ class _Namoos_E_RisalatPageState extends State<Namoos_E_RisalatPage> {
               child: Align(
                 alignment: Alignment.center,
                 child: ListTile(
-                  trailing: Icon(
-                    Icons.play_circle_fill,
-                    color: CColors.dGreen,
-                  ),
+                  trailing: CShareButton(url: lectueUrls[index]),
                   onTap: CNavigator.push(
                       className: LecturePage(
                         slideLectureNo: index,
