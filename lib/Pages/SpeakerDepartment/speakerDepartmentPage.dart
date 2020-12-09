@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shubban_educational_forum/Globals/Functions/Widgets/GridView.dart';
+import 'package:shubban_educational_forum/Pages/SpeakerDepartment/FTC/speakerFtc.dart';
 
 import '../../Globals/Classes/Colors.dart';
 import '../../Globals/Functions/Widgets/Navigator.dart';
@@ -30,7 +31,7 @@ class _SpeakerDepartmentPageState extends State<SpeakerDepartmentPage> {
       CNavigator.push(context: context, className: SeeratTopics()),
       () {},
       () {},
-      () {}
+      CNavigator.push(context: context, className: SpeakerFtc()),
     ];
 
     return CScaffold(

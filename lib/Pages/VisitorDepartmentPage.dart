@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shubban_educational_forum/Globals/Functions/Widgets/GridView.dart';
+import 'package:shubban_educational_forum/Pages/VisitDepartment/FTC/visitFtc.dart';
 
 import '../Globals/Classes/Colors.dart';
 import '../Globals/Functions/Widgets/Navigator.dart';
@@ -25,6 +26,10 @@ class _VisitorDepartmentPageState extends State<VisitorDepartmentPage> {
 
   @override
   Widget build(BuildContext context) {
+    functions = [
+      CNavigator.push(context: context, className: VisitFtc()),
+      () {}
+    ];
     return CSimpleScaffold(
         context: context,
         title: 'Visitor Department',

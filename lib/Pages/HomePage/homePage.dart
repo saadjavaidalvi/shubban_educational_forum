@@ -8,6 +8,7 @@ import 'package:shubban_educational_forum/Pages/faqsPage.dart';
 import 'package:shubban_educational_forum/Pages/financeDepartment.dart';
 import 'package:shubban_educational_forum/Pages/followUpDepartment.dart';
 import 'package:shubban_educational_forum/Pages/SpeakerDepartment/speakerDepartmentPage.dart';
+import 'package:shubban_educational_forum/Pages/lecturePage.dart';
 import 'package:shubban_educational_forum/Pages/studentDepartmentPage.dart';
 
 class HomePage extends StatefulWidget {
@@ -32,14 +33,18 @@ class _HomePageState extends State<HomePage> {
   void initState() {
     // TODO: implement initState
     functions = [
-      () {},
+      CNavigator.push(
+          context: context,
+          className: LecturePage(
+            lectures: ["RvOVkyokdm8"],
+            slideLectureNo: 0,
+          )),
       CNavigator.push(context: context, className: SpeakerDepartmentPage()),
       CNavigator.push(context: context, className: VisitorDepartmentPage()),
       CNavigator.push(context: context, className: StudentDepartmentPage()),
       CNavigator.push(context: context, className: FollowUpDepartmentPage()),
       CNavigator.push(context: context, className: FinanceDepartmentPage()),
       CNavigator.push(context: context, className: FaqsPage()),
-      // CNavigator.push(context: context, className: StudentDepartmentPage()),
     ];
     // print(functions.length);
   }
