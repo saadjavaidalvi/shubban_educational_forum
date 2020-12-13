@@ -3,6 +3,7 @@ import 'package:shubban_educational_forum/Globals/Functions/Widgets/GridView.dar
 import 'package:shubban_educational_forum/Globals/Functions/Widgets/Navigator.dart';
 import 'package:shubban_educational_forum/Globals/Functions/Widgets/Widgets.dart';
 import 'package:shubban_educational_forum/Pages/FAQs/FollowUpDepartment/faqsFollowUp.dart';
+import 'package:shubban_educational_forum/Pages/FAQs/SpeakerDepartment/faqSpearkerDepartmentPage.dart';
 
 class FaqsPage extends StatelessWidget {
   List<String> headings = [
@@ -16,7 +17,8 @@ class FaqsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     functions = [
-      () {},
+      // () {},
+      CNavigator.push(context: context, className: FaqSpearkerDepartmentPage()),
       () {},
       () {},
       CNavigator.push(context: context, className: FaqsFollowUp()),
