@@ -5,6 +5,8 @@ import 'package:shubban_educational_forum/Globals/Functions/Widgets/Widgets.dart
 import 'package:shubban_educational_forum/Pages/FAQs/FollowUpDepartment/faqsFollowUp.dart';
 import 'package:shubban_educational_forum/Pages/FAQs/SpeakerDepartment/faqSpearkerDepartmentPage.dart';
 
+import 'FAQs/VisitorDepartment/faqsVisitors.dart';
+
 class FaqsPage extends StatelessWidget {
   List<String> headings = [
     "Speaker Department",
@@ -19,7 +21,7 @@ class FaqsPage extends StatelessWidget {
     functions = [
       // () {},
       CNavigator.push(context: context, className: FaqSpearkerDepartmentPage()),
-      () {},
+      CNavigator.push(context: context, className: FaqsVisitors()),
       () {},
       CNavigator.push(context: context, className: FaqsFollowUp()),
       () {},
