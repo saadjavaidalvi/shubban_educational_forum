@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shubban_educational_forum/Globals/Functions/Widgets/GridView.dart';
 import 'package:shubban_educational_forum/Pages/VisitDepartment/FTC/visitFtc.dart';
+import 'package:shubban_educational_forum/Pages/refresherCources.dart';
 
 import '../Globals/Classes/Colors.dart';
 import '../Globals/Functions/Widgets/Navigator.dart';
@@ -28,7 +29,7 @@ class _VisitorDepartmentPageState extends State<VisitorDepartmentPage> {
   Widget build(BuildContext context) {
     functions = [
       CNavigator.push(context: context, className: VisitFtc()),
-      () {}
+      CNavigator.push(context: context, className: RefresherCource()),
     ];
     return CSimpleScaffold(
         context: context,
