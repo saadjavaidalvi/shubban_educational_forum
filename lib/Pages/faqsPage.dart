@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shubban_educational_forum/Globals/Functions/Widgets/GridView.dart';
 import 'package:shubban_educational_forum/Globals/Functions/Widgets/Navigator.dart';
 import 'package:shubban_educational_forum/Globals/Functions/Widgets/Widgets.dart';
+import 'package:shubban_educational_forum/Pages/FAQs/FinanceDepartment/FaqFinance.dart';
 import 'package:shubban_educational_forum/Pages/FAQs/FollowUpDepartment/faqsFollowUp.dart';
 import 'package:shubban_educational_forum/Pages/FAQs/SpeakerDepartment/faqSpearkerDepartmentPage.dart';
 
@@ -24,7 +25,7 @@ class FaqsPage extends StatelessWidget {
       CNavigator.push(context: context, className: FaqsVisitors()),
       () {},
       CNavigator.push(context: context, className: FaqsFollowUp()),
-      () {},
+      CNavigator.push(context: context, className: FaqsFinance()),
     ];
     return CSimpleScaffold(
         context: context,

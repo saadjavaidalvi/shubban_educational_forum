@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shubban_educational_forum/Globals/Functions/Widgets/GridView.dart';
 import 'package:shubban_educational_forum/Globals/Functions/Widgets/Navigator.dart';
 import 'package:shubban_educational_forum/Globals/Functions/Widgets/Widgets.dart';
+import 'package:shubban_educational_forum/Pages/FinanceDepartment/FTC/FinanceFtcPage.dart';
 import 'package:shubban_educational_forum/Pages/refresherCources.dart';
 
 class FinanceDepartmentPage extends StatelessWidget {
@@ -12,7 +13,7 @@ class FinanceDepartmentPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     functions = [
-      () {},
+      CNavigator.push(context: context, className: FinanceFtcPage()),
       CNavigator.push(context: context, className: RefresherCource()),
     ];
     return CSimpleScaffold(
