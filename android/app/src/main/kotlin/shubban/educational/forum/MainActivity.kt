@@ -1,4 +1,4 @@
-package com.example.shubban_educational_forum
+package shubban.educational.forum
 
 import io.flutter.embedding.android.FlutterActivity
 

@@ -11,6 +11,8 @@ import 'package:shubban_educational_forum/Pages/SpeakerDepartment/speakerDepartm
 import 'package:shubban_educational_forum/Pages/lecturePage.dart';
 import 'package:shubban_educational_forum/Pages/studentDepartmentPage.dart';
 
+import '../lmsPage.dart';
+
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
@@ -24,6 +26,7 @@ class _HomePageState extends State<HomePage> {
     "Student Department",
     "Follow Up Department",
     "Finance Department",
+    "LMS",
     'FAQ\'s',
   ];
 
@@ -44,6 +47,7 @@ class _HomePageState extends State<HomePage> {
       CNavigator.push(context: context, className: StudentDepartmentPage()),
       CNavigator.push(context: context, className: FollowUpDepartmentPage()),
       CNavigator.push(context: context, className: FinanceDepartmentPage()),
+      CNavigator.push(context: context, className: LMSPage()),
       CNavigator.push(context: context, className: FaqsPage()),
     ];
     // print(functions.length);
