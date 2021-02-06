@@ -11,6 +11,9 @@ class LMSPage extends StatelessWidget {
     'How to Use LMS For Students',
     'How to Use LMS For Teachers',
     'How to Sign-up On LMS',
+    'How to use SEF Quiz App',
+    'How to use SEF T&D App ',
+    'How to use SEF Session App'
     // '5',
     // '6',
     // '7',
@@ -34,9 +37,9 @@ class LMSPage extends StatelessWidget {
     'KCSC7eQqvEw',
     'Jl1KkpoZ4wQ',
     'aN9BXZO3ApY',
-    // 'yzAPwDPPRDY',
-    // '4arE5Ywkuus',
-    // 'UiCekTPdO-E',
+    '22nUdwfryfw',
+    'FQSVONbflk8',
+    'YX5xJfBXt_Q',
     // 'L-iWFlUlM9c',
     // 'ng5kDeEBXgo',
     // 's9Yo272mFGs',
@@ -57,7 +60,7 @@ class LMSPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return CSimpleScaffold(
       context: context,
-      title: 'khatm-e-nabuwat',
+      title: 'LMS',
       body: ListView.builder(
         itemCount: headerText.length,
         itemBuilder: (BuildContext context, int index) {
