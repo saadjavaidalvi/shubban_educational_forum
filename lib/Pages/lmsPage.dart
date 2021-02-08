@@ -13,7 +13,8 @@ class LMSPage extends StatelessWidget {
     'How to Sign-up On LMS',
     'How to use SEF Quiz App',
     'How to use SEF T&D App ',
-    'How to use SEF Session App'
+    'How to use SEF Session App',
+    'How to Use LMS For Teachers',
     // '5',
     // '6',
     // '7',
@@ -40,6 +41,7 @@ class LMSPage extends StatelessWidget {
     '22nUdwfryfw',
     'FQSVONbflk8',
     'YX5xJfBXt_Q',
+    'mM-kRA4Z6NU',
     // 'L-iWFlUlM9c',
     // 'ng5kDeEBXgo',
     // 's9Yo272mFGs',
