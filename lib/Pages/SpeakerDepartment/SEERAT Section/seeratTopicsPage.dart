@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:shubban_educational_forum/Globals/Functions/Widgets/Navigator.dart';
-import 'package:shubban_educational_forum/Pages/SpeakerDepartment/namoos_e_risalatPage.dart';
 
-import '../../Globals/Classes/Colors.dart';
-import '../../Globals/Functions/Widgets/GridView.dart';
-import '../../Globals/Functions/Widgets/Widgets.dart';
-import 'khatm_e_nabuwatPage.dart';
+import '../../../Globals/Classes/Colors.dart';
+import '../../../Globals/Functions/Widgets/GridView.dart';
+import '../../../Globals/Functions/Widgets/Widgets.dart';
+import 'Khatm_e_Nabuwat/khatm_e_nabuwatPage.dart';
+import 'Namoos_E_Risalat/namoos_e_risalatPage.dart';
 
 class SeeratTopics extends StatelessWidget {
   // BuildContext cContext;
