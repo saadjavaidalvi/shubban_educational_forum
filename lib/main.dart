@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:shubban_educational_forum/Globals/Classes/Colors.dart';
-import 'package:shubban_educational_forum/Globals/Functions/Widgets/Widgets.dart';
+// import 'package:shubban_educational_forum/Globals/Classes/Colors.dart';
+// import 'package:shubban_educational_forum/Globals/Functions/Widgets/Widgets.dart';
 import 'package:shubban_educational_forum/Pages/HomePage/homePage.dart';
-import 'package:shubban_educational_forum/Pages/SpeakerDepartment/SEERAT%20Section/seeratTopicsPage.dart';
-import 'package:youtube_player_flutter/youtube_player_flutter.dart';
+// import 'package:shubban_educational_forum/Pages/SpeakerDepartment/SEERAT%20Section/seeratTopicsPage.dart';
+// import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
-import 'Pages/SpeakerDepartment/speakerDepartmentPage.dart';
+// import 'Pages/SpeakerDepartment/speakerDepartmentPage.dart';
 
 void main() {
   runApp(MyApp());

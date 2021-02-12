@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shubban_educational_forum/Globals/Functions/Widgets/Navigator.dart';
+import 'package:shubban_educational_forum/Pages/SpeakerDepartment/SEERAT%20Section/Buniadi_Insani_Haqooq/buniadiInsaniHaqooqPage.dart';
+import 'package:shubban_educational_forum/Pages/SpeakerDepartment/SEERAT%20Section/Haqooq_E_Mustafa/haqooq-e-mustafaPage.dart';
 
 import '../../../Globals/Classes/Colors.dart';
 import '../../../Globals/Functions/Widgets/GridView.dart';
@@ -14,20 +16,18 @@ class SeeratTopics extends StatelessWidget {
     "namoos-e-risalat",
     "haqooq-e-mustafa",
     "seerat-un-nabi",
-    "buniadi insani",
+    "buniadi insani haqooq",
     "fitna-e-qadianiat",
     "qadianiat ordinence",
-    // "faq's"
   ];
   List<String> homeOptionsSubtext = [
     "(p.b.u.h)",
     "(p.b.u.h)",
     "(p.b.u.h)",
     "(p.b.u.h)",
-    "haqooq",
+    "",
     "siasi tehreek ya mazhabi?",
     "1984 (298 b,c)",
-    // ""
   ];
   List<Function> functions = [
     () {},
@@ -37,13 +37,20 @@ class SeeratTopics extends StatelessWidget {
     () {},
     () {},
     () {},
-    // () {},
   ];
   _setNavigationRoutes(BuildContext context) {
     functions[0] =
         CNavigator.push(context: context, className: Khatm_e_NabuwatPage());
     functions[1] =
         CNavigator.push(context: context, className: Namoos_E_RisalatPage());
+    functions[2] =
+        CNavigator.push(context: context, className: Haqooq_E_MustafaPage());
+    // functions[3] =
+    //     CNavigator.push(context: context, className: );
+    functions[4] =
+        CNavigator.push(context: context, className: BuniadiInsaniHaqooqPage());
+    // functions[5] = CNavigator.push(context: context, className: );
+    // functions[6] = CNavigator.push(context: context, className: );
   }
 
   @override

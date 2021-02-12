@@ -3,11 +3,8 @@ import 'package:shubban_educational_forum/Globals/Functions/Widgets/GridView.dar
 import 'package:shubban_educational_forum/Pages/VisitDepartment/FTC/visitFtc.dart';
 import 'package:shubban_educational_forum/Pages/refresherCources.dart';
 
-import '../Globals/Classes/Colors.dart';
 import '../Globals/Functions/Widgets/Navigator.dart';
 import '../Globals/Functions/Widgets/Widgets.dart';
-import '../Globals/Functions/Widgets/onWillScope.dart';
-import 'SpeakerDepartment/seeratTopicsPage.dart';
 
 class VisitorDepartmentPage extends StatefulWidget {
   VisitorDepartmentPage({Key key, this.title}) : super(key: key);
