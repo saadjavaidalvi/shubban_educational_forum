@@ -3,6 +3,7 @@ import 'package:shubban_educational_forum/Globals/Functions/Widgets/GridView.dar
 import 'package:shubban_educational_forum/Globals/Functions/Widgets/Navigator.dart';
 import 'package:shubban_educational_forum/Globals/Functions/Widgets/Widgets.dart';
 import 'package:shubban_educational_forum/Globals/Functions/Widgets/onWillScope.dart';
+import 'package:shubban_educational_forum/Pages/Orientation/orientation.dart';
 import 'package:shubban_educational_forum/Pages/VisitorDepartmentPage.dart';
 import 'package:shubban_educational_forum/Pages/faqsPage.dart';
 import 'package:shubban_educational_forum/Pages/FinanceDepartment/financeDepartment.dart';
@@ -36,12 +37,7 @@ class _HomePageState extends State<HomePage> {
   void initState() {
     // TODO: implement initState
     functions = [
-      CNavigator.push(
-          context: context,
-          className: LecturePage(
-            lectures: ["RvOVkyokdm8"],
-            slideLectureNo: 0,
-          )),
+      CNavigator.push(context: context, className: OrientationPage()),
       CNavigator.push(context: context, className: SpeakerDepartmentPage()),
       CNavigator.push(context: context, className: VisitorDepartmentPage()),
       CNavigator.push(context: context, className: StudentDepartmentPage()),
