@@ -4,7 +4,7 @@ import 'package:shubban_educational_forum/Globals/Functions/Widgets/Navigator.da
 import 'package:shubban_educational_forum/Globals/Functions/Widgets/Widgets.dart';
 import 'package:shubban_educational_forum/Pages/lecturePage.dart';
 
-class Fitna_E_Qadianiat extends StatelessWidget {
+class Namoose_e_Risalat_aur_UN extends StatelessWidget {
   Color listTileColor = CColors.yellow;
   List<String> slidesNumbers = [
     '1',
@@ -15,24 +15,22 @@ class Fitna_E_Qadianiat extends StatelessWidget {
     '6',
     '7',
     '8',
-    '9',
   ];
   List<String> lectueUrls = [
-    'dWjUaCsGVYg',
-    'qXaB2VaZfJk',
-    'ndeCj7Td0kY',
-    'KJg7HlGc-u8',
-    'gAKZXZJHXRI',
-    'g2AgPer3FuQ',
-    'xBMag0wORhg',
-    'YIwwZuSDu2k',
-    '4m3fOP53bsg',
+    'UQICvMxmQM8',
+    '1hqn4p5Lds4',
+    'DNEofaZ8uNs',
+    'BBt6r62g264',
+    'Lfob8JUt1Zw',
+    'vOpcHLp5ltk',
+    'FI2TF4QzIxE',
+    '4ZpVogiaaBA',
   ];
   @override
   Widget build(BuildContext context) {
     return CSimpleScaffold(
       context: context,
-      title: 'Fitna-E-Qadianiat',
+      title: 'Namoose-e-Risalat aur UN',
       body: ListView.builder(
         itemCount: slidesNumbers.length,
         itemBuilder: (BuildContext context, int index) {

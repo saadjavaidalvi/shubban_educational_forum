@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:shubban_educational_forum/Globals/Functions/Widgets/Navigator.dart';
 import 'package:shubban_educational_forum/Pages/SpeakerDepartment/SEERAT%20Section/Buniadi_Insani_Haqooq/buniadiInsaniHaqooqPage.dart';
-import 'package:shubban_educational_forum/Pages/SpeakerDepartment/SEERAT%20Section/Fitna-E-Qadianiat/fitna-e-qadianiat.dart';
+import 'package:shubban_educational_forum/Pages/SpeakerDepartment/SEERAT%20Section/Fitna-E-Qadianiat/Qadiyaniat_Mahzabhi/fitna-e-qadianiat.dart';
 import 'package:shubban_educational_forum/Pages/SpeakerDepartment/SEERAT%20Section/Haqooq_E_Mustafa/haqooq-e-mustafaPage.dart';
 
 import '../../../Globals/Classes/Colors.dart';
 import '../../../Globals/Functions/Widgets/GridView.dart';
 import '../../../Globals/Functions/Widgets/Widgets.dart';
+import 'Fitna-E-Qadianiat/fitna_e_qadianiat.dart';
 import 'Khatm_e_Nabuwat/khatm_e_nabuwatPage.dart';
 import 'Namoos_E_Risalat/namoos_e_risalatPage.dart';
 
