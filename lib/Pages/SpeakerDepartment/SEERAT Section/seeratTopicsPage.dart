@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:shubban_educational_forum/Globals/Functions/Widgets/Navigator.dart';
 import 'package:shubban_educational_forum/Pages/SpeakerDepartment/SEERAT%20Section/Buniadi_Insani_Haqooq/buniadiInsaniHaqooqPage.dart';
-import 'package:shubban_educational_forum/Pages/SpeakerDepartment/SEERAT%20Section/Fitna-E-Qadianiat/Qadiyaniat_Mahzabhi/fitna-e-qadianiat.dart';
+import 'package:shubban_educational_forum/Pages/SpeakerDepartment/SEERAT%20Section/Fitna-E-Qadianiat/qadiyaniat_mahzabhi.dart';
 import 'package:shubban_educational_forum/Pages/SpeakerDepartment/SEERAT%20Section/Haqooq_E_Mustafa/haqooq-e-mustafaPage.dart';
 
 import '../../../Globals/Classes/Colors.dart';
 import '../../../Globals/Functions/Widgets/GridView.dart';
 import '../../../Globals/Functions/Widgets/Widgets.dart';
-import 'Fitna-E-Qadianiat/fitna_e_qadianiat.dart';
 import 'Khatm_e_Nabuwat/khatm_e_nabuwatPage.dart';
 import 'Namoos_E_Risalat/namoos_e_risalatPage.dart';
+import 'Namoose_E_Risalat_Aur_UN/namoose_e_risalat_aur_un.dart';
 
 class SeeratTopics extends StatelessWidget {
   // BuildContext cContext;
@@ -21,6 +21,7 @@ class SeeratTopics extends StatelessWidget {
     "buniadi insani haqooq",
     "fitna-e-qadianiat",
     "qadianiat ordinence",
+    "Namoose e Risalat",
   ];
   List<String> homeOptionsSubtext = [
     "(p.b.u.h)",
@@ -30,8 +31,10 @@ class SeeratTopics extends StatelessWidget {
     "",
     "siasi tehreek ya mazhabi?",
     "1984 (298 b,c)",
+    "aur UN",
   ];
   List<Function> functions = [
+    () {},
     () {},
     () {},
     () {},
@@ -51,8 +54,9 @@ class SeeratTopics extends StatelessWidget {
     //     CNavigator.push(context: context, className: );
     functions[4] =
         CNavigator.push(context: context, className: BuniadiInsaniHaqooqPage());
-    functions[5] = CNavigator.push(context: context, className: Fitna_E_Qadianiat());
-    // functions[6] = CNavigator.push(context: context, className: );
+    functions[5] = CNavigator.push(context: context, className: Qadiyaniat_Mahzabhi());
+    // functions[6] = CNavigator.push(context: context, className: Namoose_e_Risalat_aur_UN());
+    functions[7] = CNavigator.push(context: context, className: Namoose_e_Risalat_aur_UN());
   }
 
   @override
