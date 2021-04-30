@@ -10,7 +10,7 @@ import 'package:shubban_educational_forum/Pages/FinanceDepartment/financeDepartm
 import 'package:shubban_educational_forum/Pages/followUpDepartment.dart';
 import 'package:shubban_educational_forum/Pages/SpeakerDepartment/speakerDepartmentPage.dart';
 import 'package:shubban_educational_forum/Pages/lecturePage.dart';
-import 'package:shubban_educational_forum/Pages/studentDepartmentPage.dart';
+import 'package:shubban_educational_forum/Pages/StudentDepartment/studentDepartmentPage.dart';
 
 import '../lmsPage.dart';
 
