@@ -13,6 +13,7 @@ import 'package:shubban_educational_forum/Pages/lecturePage.dart';
 import 'package:shubban_educational_forum/Pages/StudentDepartment/studentDepartmentPage.dart';
 
 import '../lmsPage.dart';
+import '../munazraPage.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -28,6 +29,7 @@ class _HomePageState extends State<HomePage> {
     "Follow Up Department",
     "Finance Department",
     "LMS",
+    "Munazra",
     'FAQ\'s',
   ];
 
@@ -44,6 +46,7 @@ class _HomePageState extends State<HomePage> {
       CNavigator.push(context: context, className: FollowUpDepartmentPage()),
       CNavigator.push(context: context, className: FinanceDepartmentPage()),
       CNavigator.push(context: context, className: LMSPage()),
+      CNavigator.push(context: context, className: MunazraPage()),
       CNavigator.push(context: context, className: FaqsPage()),
     ];
     // print(functions.length);
