@@ -12,7 +12,7 @@ import 'package:shubban_educational_forum/Pages/SpeakerDepartment/speakerDepartm
 import 'package:shubban_educational_forum/Pages/lecturePage.dart';
 import 'package:shubban_educational_forum/Pages/StudentDepartment/studentDepartmentPage.dart';
 
-import '../lmsPage.dart';
+import '../LMS/lmsPage.dart';
 import '../munazraPage.dart';
 
 class HomePage extends StatefulWidget {
