@@ -1,16 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:share/share.dart';
-import 'package:shubban_educational_forum/Globals/Functions/Widgets/Navigator.dart';
 import 'package:shubban_educational_forum/Globals/Functions/Widgets/Widgets.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 class LecturePage extends StatefulWidget {
   List<String> lectures;
-  // String slides;
   int slideLectureNo;
   LecturePage(
       {@required this.slideLectureNo,
-      // @required this.slides,
       @required this.lectures});
   @override
   _LecturePageState createState() => _LecturePageState();
@@ -45,10 +41,11 @@ class _LecturePageState extends State<LecturePage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: CSimpleScaffold(
-          showAppBar: showAppBar,
-          context: context,
-          title: 'Lecture No. ${widget.slideLectureNo + 1}',
-          body: Container(
+        showAppBar: showAppBar,
+        context: context,
+        title: 'Lecture No. ${widget.slideLectureNo + 1}',
+        body: SafeArea(
+          child: Center(
             child: YoutubePlayerBuilder(
               onExitFullScreen: () {
                 if (firstTime) {
@@ -63,6 +60,7 @@ class _LecturePageState extends State<LecturePage> {
                 firstTime = true;
               },
               player: YoutubePlayer(
+                aspectRatio: MediaQuery.of(context).size.height/MediaQuery.of(context).size.width,
                 onEnded: (YoutubeMetaData value) {
                   if (widget.slideLectureNo + 1 == widget.lectures.length) {
                     Navigator.pop(context);
@@ -88,7 +86,9 @@ class _LecturePageState extends State<LecturePage> {
                 return child;
               },
             ),
-          )),
+          ),
+        )
+      ),
     );
   }
 }
