@@ -24,13 +24,13 @@ class BuniadiInsaniHaqooqPage extends StatelessWidget {
     // '14'
   ];
   List<String> lectueUrls = [
-    'TWgjFeIA_HQ',
-    'nysvsBI2l5I',
-    '7ob4ycNFt9w',
-    'Hn_wyYbGOpw',
-    '64gDVvYVJOg',
-    '0PCNTc_PJ_A',
-    'UZYMFyWlo6E',
+    'KZ0Obv6iEfk',
+    'vjeUDeRbZ-4',
+    '9UDM8uoqZUo',
+    'bl4BHzb6c6Q',
+    'HQF67THxQpA',
+    'CcgsE_Xg1JQ',
+    '0nnoZWdVbGc',
     // 'fAkHOpBHtPg',
     // 'JKN08O4Oa8g',
     // 'Ny1tXGYoVzs',
