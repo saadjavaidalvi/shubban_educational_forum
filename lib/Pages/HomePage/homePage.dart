@@ -4,7 +4,7 @@ import 'package:shubban_educational_forum/Globals/Functions/Widgets/Navigator.da
 import 'package:shubban_educational_forum/Globals/Functions/Widgets/Widgets.dart';
 import 'package:shubban_educational_forum/Globals/Functions/Widgets/onWillScope.dart';
 import 'package:shubban_educational_forum/Pages/Orientation/orientation.dart';
-import 'package:shubban_educational_forum/Pages/VisitorDepartmentPage.dart';
+import 'package:shubban_educational_forum/Pages/VisitDepartment/VisitorDepartmentPage.dart';
 import 'package:shubban_educational_forum/Pages/faqsPage.dart';
 import 'package:shubban_educational_forum/Pages/FinanceDepartment/financeDepartment.dart';
 import 'package:shubban_educational_forum/Pages/followUpDepartment.dart';
