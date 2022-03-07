@@ -19,7 +19,7 @@ class Qadiyaniat_Mahzabhi extends StatelessWidget {
   ];
   List<String> lectueUrls = [
     'dWjUaCsGVYg',
-    'qXaB2VaZfJk',
+    '-eeyqENsIPs',
     'ndeCj7Td0kY',
     'KJg7HlGc-u8',
     'gAKZXZJHXRI',
