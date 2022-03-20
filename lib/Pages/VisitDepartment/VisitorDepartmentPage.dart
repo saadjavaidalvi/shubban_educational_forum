@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shubban_educational_forum/Globals/Functions/Widgets/GridView.dart';
 import 'package:shubban_educational_forum/Pages/VisitDepartment/FTC/visitFtc.dart';
-import 'package:shubban_educational_forum/Pages/refresherCources.dart';
+import 'package:shubban_educational_forum/Pages/RefresherCource/refresherCources.dart';
 
 import '../../Globals/Functions/Widgets/Navigator.dart';
 import '../../Globals/Functions/Widgets/Widgets.dart';
@@ -21,7 +21,7 @@ class _VisitorDepartmentPageState extends State<VisitorDepartmentPage> {
     "REFRESHER Courses",
     "Departmental Courses"
   ];
-  List<String> homeOptionsSubtext = ["(FTC)", "",""];
+  List<String> homeOptionsSubtext = ["(FTC)", "", ""];
   List<Function> functions;
 
   @override
@@ -29,8 +29,8 @@ class _VisitorDepartmentPageState extends State<VisitorDepartmentPage> {
     functions = [
       CNavigator.push(context: context, className: VisitFtc()),
       CNavigator.push(context: context, className: RefresherCource()),
-      CNavigator.push(context: context, className: VisotrDepartmentalCoursePage()),
-
+      CNavigator.push(
+          context: context, className: VisotrDepartmentalCoursePage()),
     ];
     return CSimpleScaffold(
         context: context,

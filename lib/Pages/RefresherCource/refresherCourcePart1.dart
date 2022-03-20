@@ -1,23 +1,26 @@
 import 'package:flutter/material.dart';
-import 'package:shubban_educational_forum/Globals/Classes/Colors.dart';
-import 'package:shubban_educational_forum/Globals/Functions/Widgets/Navigator.dart';
-import 'package:shubban_educational_forum/Globals/Functions/Widgets/Widgets.dart';
-import 'package:shubban_educational_forum/Pages/lecturePage.dart';
 
-class RefresherCource extends StatelessWidget {
-  Color listTileColor = CColors.yellow;
-  List<String> slidesNumbers = [
-    'Part # 1',
-    'Part # 2',
-    'Part # 3',
-  ];
-  List<String> lectueUrls = [
-    'tWBZRV8wc1g',
-    'zzzgu9N-He4',
-    'Px67S8If7Nk',
-  ];
+import '../../Globals/Classes/Colors.dart';
+import '../../Globals/Functions/Widgets/Navigator.dart';
+import '../../Globals/Functions/Widgets/Widgets.dart';
+import '../lecturePage.dart';
+
+class RefresherCourcePart1 extends StatelessWidget {
+  const RefresherCourcePart1({Key key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
+    Color listTileColor = CColors.yellow;
+    List<String> slidesNumbers = [
+      'Part # 1',
+      'Part # 2',
+      'Part # 3',
+    ];
+    List<String> lectueUrls = [
+      'tWBZRV8wc1g',
+      'zzzgu9N-He4',
+      'Px67S8If7Nk',
+    ];
     return CSimpleScaffold(
       context: context,
       title: 'Refresher Cources',
@@ -35,11 +38,12 @@ class RefresherCource extends StatelessWidget {
                 child: ListTile(
                   trailing: CShareButton(url: lectueUrls[index]),
                   onTap: CNavigator.push(
-                      className: LecturePage(
-                        slideLectureNo: index,
-                        lectures: lectueUrls,
-                      ),
-                      context: context),
+                    className: LecturePage(
+                      slideLectureNo: index,
+                      lectures: lectueUrls,
+                    ),
+                    context: context,
+                  ),
                   tileColor: listTileColor,
                   title: Text("${slidesNumbers[index]}"),
                 ),

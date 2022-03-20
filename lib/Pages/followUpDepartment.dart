@@ -3,7 +3,7 @@ import 'package:shubban_educational_forum/Globals/Functions/Widgets/GridView.dar
 import 'package:shubban_educational_forum/Globals/Functions/Widgets/Navigator.dart';
 import 'package:shubban_educational_forum/Globals/Functions/Widgets/Widgets.dart';
 import 'package:shubban_educational_forum/Pages/FollowUpDepartment/FTC/followUpFtc.dart';
-import 'package:shubban_educational_forum/Pages/refresherCources.dart';
+import 'package:shubban_educational_forum/Pages/RefresherCource/refresherCources.dart';
 
 class FollowUpDepartmentPage extends StatelessWidget {
   List<String> headings = ["Foundation Traning Course", "REFRESHER courses"];
